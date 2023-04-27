@@ -1,6 +1,6 @@
 import AppBar from "./components/AppBar";
-import BubbleZone from "./components/Bubble Zone";
 import Gallery from "./components/Gallery";
+import './App.css'
 
 function App() {
   return (
@@ -8,7 +8,6 @@ function App() {
       <AppBar />
       <section className="flex flex-row">
         <Gallery />
-        <BubbleZone />
       </section>
     </>
   );
