@@ -8,4 +8,5 @@ body {
     background: -webkit-linear-gradient(90deg, rgba(115, 127, 187, 1) 0%, rgba(158, 163, 209, 1) 47%, rgba(218, 154, 167, 1) 100%);
     background: linear-gradient(90deg, rgba(115, 127, 187, 1) 0%, rgba(158, 163, 209, 1) 47%, rgba(218, 154, 167, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#737fbb", endColorstr="#da9aa7", GradientType=1);
+    overflow: hidden;
 }
