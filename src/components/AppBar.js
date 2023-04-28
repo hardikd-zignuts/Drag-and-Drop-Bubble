@@ -9,7 +9,6 @@ const AppBar = () => {
                     <span className="ml-3 text-xl">Drag and Drop</span>
                 </div>
             </header>
-            <hr />
         </>
     )
 }

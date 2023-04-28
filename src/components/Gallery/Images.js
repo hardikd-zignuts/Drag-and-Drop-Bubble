@@ -1,25 +1,25 @@
 import React from 'react'
 import DummyImage from '../../constant/DummyImage'
 import Draggable from 'react-draggable';
-import { randomColor } from '../../utils/utils';
+import { randomGradientColor } from '../../utils/utils';
 
-const Images = () => {
-    // const [image, setImage] = useState(null);
+const Images = ({ handleDivClick }) => {
     const handleDrag = (e, data) => {
-        console.log('drag', data)
     };
-
-    // const handleDrop = (e, data) => {
-    //     setImage(e.target.src);
-    //     console.log('drop', data)
-    // };
+    const handleDrop = (e, id, data) => {
+        console.log(e.pageX + 50)
+        if ((e.pageX + 250) > (window.screen.width / 2 + 6)) {
+            handleDivClick(e)
+            document.getElementById(`${id}`).style.display = 'none'
+        }
+    };
     return (
         <div className='m-5'>
             {
                 DummyImage.map((image, index) => {
                     return (
-                        <Draggable key={index} onDrag={handleDrag}>
-                            <div style={{ backgroundColor: randomColor() }} className='h-[60px] w-full m-2' sty key={index} src={image.url} alt={image.title} />
+                        <Draggable onStop={(e) => handleDrop(e, `i${index}`)} key={`box${index}`} onDrag={(e) => handleDrag(e)}>
+                            <div id={`i${index}`} style={{ background: randomGradientColor() }} className='h-[60px] w-full m-2 z[-1]' key={index} src={image.url} alt={image.title} />
                         </Draggable>
                     )
                 })

@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <AppBar />
-      <section className="flex flex-row">
+      <section className="flex flex-row h-[100vh]">
         <Gallery />
       </section>
     </>
